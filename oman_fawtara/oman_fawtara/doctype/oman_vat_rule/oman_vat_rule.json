@@ -1,0 +1,355 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_code",
+  "title",
+  "rule_type",
+  "check_key",
+  "cb1",
+  "status",
+  "enabled",
+  "severity",
+  "applies_to",
+  "priority",
+  "sb_legal",
+  "effective_from",
+  "effective_to",
+  "cb2",
+  "ruleset_version",
+  "legal_reference",
+  "sb_cond",
+  "company",
+  "treatment",
+  "vat_code",
+  "supply_category",
+  "cb3",
+  "party_country_condition",
+  "party_registration_condition",
+  "item_group",
+  "account",
+  "sb_action",
+  "numeric_value",
+  "text_value",
+  "cb4",
+  "action_treatment",
+  "action_recovery_profile",
+  "message",
+  "sb_appr",
+  "approved_by",
+  "approved_on",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_code",
+   "fieldtype": "Data",
+   "label": "Rule Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rule_type",
+   "fieldtype": "Select",
+   "label": "Rule Type",
+   "options": "Validation\nReverse Charge\nPlace of Supply\nEvidence\nTiming\nThreshold",
+   "default": "Validation",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "check_key",
+   "fieldtype": "Select",
+   "label": "Check",
+   "options": "\nparty_vrn_format\nb2b_requires_buyer_vrn\ninput_claim_requires_supplier_vrn\nzero_rated_requires_evidence\nexport_requires_foreign_destination\ninvoice_issue_within_days\nduplicate_supplier_invoice\nrcm_foreign_services\nimport_goods_requires_declaration\ncredit_note_requires_original\nadjustment_reason_required\nforeign_currency_rate\nb2c_simplified_threshold\nbad_debt_min_age_days"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApproved\nRetired",
+   "default": "Draft",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "Error\nWarning\nInfo",
+   "default": "Error",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "applies_to",
+   "fieldtype": "Select",
+   "label": "Applies To",
+   "options": "Sales\nPurchase\nBoth",
+   "default": "Both"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "default": "0"
+  },
+  {
+   "fieldname": "sb_legal",
+   "fieldtype": "Section Break",
+   "label": "Legal Basis & Validity"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ruleset_version",
+   "fieldtype": "Data",
+   "label": "Rule-set Version"
+  },
+  {
+   "fieldname": "legal_reference",
+   "fieldtype": "Data",
+   "label": "Legal Reference"
+  },
+  {
+   "fieldname": "sb_cond",
+   "fieldtype": "Section Break",
+   "label": "Conditions"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Link",
+   "label": "Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "vat_code",
+   "fieldtype": "Link",
+   "label": "VAT Code",
+   "options": "Oman VAT Code"
+  },
+  {
+   "fieldname": "supply_category",
+   "fieldtype": "Select",
+   "label": "Supply Category",
+   "options": "Any\nGoods\nServices",
+   "default": "Any"
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party_country_condition",
+   "fieldtype": "Select",
+   "label": "Party Country",
+   "options": "Any\nOman\nNot Oman\nGCC\nNon-GCC",
+   "default": "Any"
+  },
+  {
+   "fieldname": "party_registration_condition",
+   "fieldtype": "Select",
+   "label": "Party Registration",
+   "options": "Any\nRegistered\nUnregistered",
+   "default": "Any"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sb_action",
+   "fieldtype": "Section Break",
+   "label": "Parameters & Action"
+  },
+  {
+   "fieldname": "numeric_value",
+   "fieldtype": "Float",
+   "label": "Numeric Parameter"
+  },
+  {
+   "fieldname": "text_value",
+   "fieldtype": "Data",
+   "label": "Text Parameter"
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "action_treatment",
+   "fieldtype": "Link",
+   "label": "Set Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "action_recovery_profile",
+   "fieldtype": "Link",
+   "label": "Set Recovery Profile",
+   "options": "Oman VAT Recovery Profile"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message"
+  },
+  {
+   "fieldname": "sb_appr",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Rule",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:rule_code",
+ "title_field": "title",
+ "track_changes": 1
+}

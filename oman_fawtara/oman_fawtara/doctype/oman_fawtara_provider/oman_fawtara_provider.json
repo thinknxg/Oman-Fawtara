@@ -1,0 +1,537 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "provider_name",
+  "adapter",
+  "enabled",
+  "environment",
+  "cb1",
+  "accreditation_number",
+  "last_check_at",
+  "last_check_ok",
+  "last_check_message",
+  "sb_sandbox",
+  "sandbox_behaviour",
+  "sandbox_failures",
+  "tab_conn",
+  "base_url",
+  "submit_path",
+  "status_path",
+  "ping_path",
+  "list_path",
+  "cb_c",
+  "timeout_seconds",
+  "verify_tls",
+  "client_certificate",
+  "idempotency_header",
+  "sb_auth",
+  "auth_type",
+  "api_key_header",
+  "api_key",
+  "username",
+  "password",
+  "cb_a",
+  "token_url",
+  "client_id",
+  "client_secret",
+  "scope",
+  "extra_headers",
+  "tab_payload",
+  "payload_format",
+  "payload_uuid_key",
+  "payload_number_key",
+  "payload_type_key",
+  "payload_xml_key",
+  "cb_p",
+  "resp_status_path",
+  "accepted_values",
+  "pending_values",
+  "rejected_values",
+  "resp_reference_path",
+  "resp_message_path",
+  "sb_ota",
+  "resp_ota_status_path",
+  "resp_ota_reference_path",
+  "ota_reported_values",
+  "ota_acknowledged_values",
+  "ota_failed_values",
+  "cb_o",
+  "resp_delivery_status_path",
+  "resp_errors_path",
+  "error_code_key",
+  "error_message_key",
+  "error_path_key",
+  "resp_receipt_path",
+  "receipt_is_base64",
+  "resp_stamped_xml_path",
+  "sb_list",
+  "list_items_path",
+  "list_uuid_key",
+  "list_number_key",
+  "list_status_key",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "label": "Provider Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "adapter",
+   "fieldtype": "Data",
+   "label": "Adapter",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Sandbox (Simulated), Generic REST, or an adapter registered via hooks."
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1"
+  },
+  {
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "label": "Environment",
+   "options": "Sandbox\nProduction",
+   "default": "Sandbox",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accreditation_number",
+   "fieldtype": "Data",
+   "label": "OTA Accreditation No."
+  },
+  {
+   "fieldname": "last_check_at",
+   "fieldtype": "Datetime",
+   "label": "Last Connectivity Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_check_ok",
+   "fieldtype": "Check",
+   "label": "Last Check OK",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_check_message",
+   "fieldtype": "Data",
+   "label": "Last Check Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_sandbox",
+   "fieldtype": "Section Break",
+   "label": "Sandbox Behaviour",
+   "depends_on": "eval:doc.adapter=='Sandbox (Simulated)'"
+  },
+  {
+   "fieldname": "sandbox_behaviour",
+   "fieldtype": "Select",
+   "label": "Simulated Outcome",
+   "options": "Accept\nAccept, OTA Pending\nReject\nTransient Failure then Accept",
+   "default": "Accept"
+  },
+  {
+   "fieldname": "sandbox_failures",
+   "fieldtype": "Int",
+   "label": "Simulated Failures before Accept",
+   "default": "1"
+  },
+  {
+   "fieldname": "tab_conn",
+   "fieldtype": "Tab Break",
+   "label": "Connection"
+  },
+  {
+   "fieldname": "base_url",
+   "fieldtype": "Data",
+   "label": "Base URL"
+  },
+  {
+   "fieldname": "submit_path",
+   "fieldtype": "Data",
+   "label": "Submit Path",
+   "default": "/invoices"
+  },
+  {
+   "fieldname": "status_path",
+   "fieldtype": "Data",
+   "label": "Status Path",
+   "default": "/invoices/{reference}"
+  },
+  {
+   "fieldname": "ping_path",
+   "fieldtype": "Data",
+   "label": "Health-check Path",
+   "default": "/health"
+  },
+  {
+   "fieldname": "list_path",
+   "fieldtype": "Data",
+   "label": "List Path (reconciliation)"
+  },
+  {
+   "fieldname": "cb_c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timeout_seconds",
+   "fieldtype": "Int",
+   "label": "Timeout (s)",
+   "default": "30"
+  },
+  {
+   "fieldname": "verify_tls",
+   "fieldtype": "Check",
+   "label": "Verify TLS",
+   "default": "1"
+  },
+  {
+   "fieldname": "client_certificate",
+   "fieldtype": "Link",
+   "label": "Client Certificate (mTLS)",
+   "options": "Oman Fawtara Certificate"
+  },
+  {
+   "fieldname": "idempotency_header",
+   "fieldtype": "Data",
+   "label": "Idempotency Header",
+   "default": "Idempotency-Key"
+  },
+  {
+   "fieldname": "sb_auth",
+   "fieldtype": "Section Break",
+   "label": "Authentication"
+  },
+  {
+   "fieldname": "auth_type",
+   "fieldtype": "Select",
+   "label": "Auth Type",
+   "options": "None\nAPI Key Header\nBearer Token\nBasic\nOAuth2 Client Credentials",
+   "default": "API Key Header"
+  },
+  {
+   "fieldname": "api_key_header",
+   "fieldtype": "Data",
+   "label": "API Key Header",
+   "default": "X-API-Key"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key / Token"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "cb_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "token_url",
+   "fieldtype": "Data",
+   "label": "Token URL"
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "label": "Client ID"
+  },
+  {
+   "fieldname": "client_secret",
+   "fieldtype": "Password",
+   "label": "Client Secret"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Data",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "extra_headers",
+   "fieldtype": "Table",
+   "label": "Extra Headers",
+   "options": "Oman Fawtara Provider Header"
+  },
+  {
+   "fieldname": "tab_payload",
+   "fieldtype": "Tab Break",
+   "label": "Payload & Response Mapping"
+  },
+  {
+   "fieldname": "payload_format",
+   "fieldtype": "Select",
+   "label": "Payload Format",
+   "options": "JSON (base64 XML)\nRaw XML",
+   "default": "JSON (base64 XML)"
+  },
+  {
+   "fieldname": "payload_uuid_key",
+   "fieldtype": "Data",
+   "label": "JSON key: UUID",
+   "default": "uuid"
+  },
+  {
+   "fieldname": "payload_number_key",
+   "fieldtype": "Data",
+   "label": "JSON key: Invoice Number",
+   "default": "invoiceNumber"
+  },
+  {
+   "fieldname": "payload_type_key",
+   "fieldtype": "Data",
+   "label": "JSON key: Document Type",
+   "default": "documentType"
+  },
+  {
+   "fieldname": "payload_xml_key",
+   "fieldtype": "Data",
+   "label": "JSON key: XML (base64)",
+   "default": "invoice"
+  },
+  {
+   "fieldname": "cb_p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resp_status_path",
+   "fieldtype": "Data",
+   "label": "Response: Status Path",
+   "default": "status"
+  },
+  {
+   "fieldname": "accepted_values",
+   "fieldtype": "Data",
+   "label": "Accepted Values",
+   "default": "ACCEPTED,CLEARED,REPORTED"
+  },
+  {
+   "fieldname": "pending_values",
+   "fieldtype": "Data",
+   "label": "Pending Values",
+   "default": "PENDING,PROCESSING,QUEUED"
+  },
+  {
+   "fieldname": "rejected_values",
+   "fieldtype": "Data",
+   "label": "Rejected Values",
+   "default": "REJECTED,INVALID"
+  },
+  {
+   "fieldname": "resp_reference_path",
+   "fieldtype": "Data",
+   "label": "Response: Provider Reference Path",
+   "default": "id"
+  },
+  {
+   "fieldname": "resp_message_path",
+   "fieldtype": "Data",
+   "label": "Response: Message Path",
+   "default": "message"
+  },
+  {
+   "fieldname": "sb_ota",
+   "fieldtype": "Section Break",
+   "label": "OTA / Delivery Mapping"
+  },
+  {
+   "fieldname": "resp_ota_status_path",
+   "fieldtype": "Data",
+   "label": "Response: OTA Status Path",
+   "default": "taxAuthority.status"
+  },
+  {
+   "fieldname": "resp_ota_reference_path",
+   "fieldtype": "Data",
+   "label": "Response: OTA Reference Path",
+   "default": "taxAuthority.reference"
+  },
+  {
+   "fieldname": "ota_reported_values",
+   "fieldtype": "Data",
+   "label": "OTA Reported Values",
+   "default": "REPORTED,SUBMITTED"
+  },
+  {
+   "fieldname": "ota_acknowledged_values",
+   "fieldtype": "Data",
+   "label": "OTA Acknowledged Values",
+   "default": "ACKNOWLEDGED,CLEARED"
+  },
+  {
+   "fieldname": "ota_failed_values",
+   "fieldtype": "Data",
+   "label": "OTA Failed Values",
+   "default": "FAILED,ERROR"
+  },
+  {
+   "fieldname": "cb_o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resp_delivery_status_path",
+   "fieldtype": "Data",
+   "label": "Response: Buyer Delivery Path",
+   "default": "delivery.status"
+  },
+  {
+   "fieldname": "resp_errors_path",
+   "fieldtype": "Data",
+   "label": "Response: Errors Path",
+   "default": "errors"
+  },
+  {
+   "fieldname": "error_code_key",
+   "fieldtype": "Data",
+   "label": "Error Code Key",
+   "default": "code"
+  },
+  {
+   "fieldname": "error_message_key",
+   "fieldtype": "Data",
+   "label": "Error Message Key",
+   "default": "message"
+  },
+  {
+   "fieldname": "error_path_key",
+   "fieldtype": "Data",
+   "label": "Error Field Key",
+   "default": "path"
+  },
+  {
+   "fieldname": "resp_receipt_path",
+   "fieldtype": "Data",
+   "label": "Response: Receipt Path"
+  },
+  {
+   "fieldname": "receipt_is_base64",
+   "fieldtype": "Check",
+   "label": "Receipt is Base64 (PDF)"
+  },
+  {
+   "fieldname": "resp_stamped_xml_path",
+   "fieldtype": "Data",
+   "label": "Response: Stamped XML Path"
+  },
+  {
+   "fieldname": "sb_list",
+   "fieldtype": "Section Break",
+   "label": "Reconciliation Listing"
+  },
+  {
+   "fieldname": "list_items_path",
+   "fieldtype": "Data",
+   "label": "List Items Path",
+   "default": "items"
+  },
+  {
+   "fieldname": "list_uuid_key",
+   "fieldtype": "Data",
+   "label": "List UUID Key",
+   "default": "uuid"
+  },
+  {
+   "fieldname": "list_number_key",
+   "fieldtype": "Data",
+   "label": "List Number Key",
+   "default": "invoiceNumber"
+  },
+  {
+   "fieldname": "list_status_key",
+   "fieldtype": "Data",
+   "label": "List Status Key",
+   "default": "status"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman Fawtara Provider",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Fawtara Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Fawtara Operator",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:provider_name"
+}

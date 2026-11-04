@@ -1,0 +1,414 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reference_doctype",
+  "reference_name",
+  "invoice_number",
+  "document_type",
+  "transaction_type",
+  "cb1",
+  "status",
+  "ota_status",
+  "needs_attention",
+  "provider",
+  "company",
+  "vat_registration",
+  "sb_ids",
+  "document_uuid",
+  "idempotency_key",
+  "issue_date",
+  "cb2",
+  "xml_file",
+  "xml_hash",
+  "receipt",
+  "sb_timeline",
+  "attempt_count",
+  "submitted_at",
+  "last_attempt_at",
+  "next_attempt_at",
+  "provider_reference",
+  "provider_accepted_at",
+  "rejected_at",
+  "cb3",
+  "ota_reference",
+  "ota_reported_at",
+  "ota_acknowledged_at",
+  "buyer_delivery_status",
+  "buyer_delivered_at",
+  "sb_err",
+  "last_error",
+  "local_validation",
+  "cb4",
+  "resubmission_reason",
+  "supersedes",
+  "superseded_by",
+  "sb_payload",
+  "canonical_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference DocType",
+   "options": "DocType",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_doctype",
+   "read_only": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Data",
+   "label": "Transaction Flags",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending\nProcessing\nAccepted\nRejected\nRetry\nCancelled",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "ota_status",
+   "fieldtype": "Select",
+   "label": "OTA Status",
+   "options": "Not Reported\nReported\nAcknowledged\nFailed",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "needs_attention",
+   "fieldtype": "Check",
+   "label": "Needs Attention",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Oman Fawtara Provider",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "vat_registration",
+   "fieldtype": "Link",
+   "label": "VAT Registration",
+   "options": "Oman VAT Registration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_ids",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "document_uuid",
+   "fieldtype": "Data",
+   "label": "Document UUID",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "idempotency_key",
+   "fieldtype": "Data",
+   "label": "Idempotency Key",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "label": "Issue Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "xml_file",
+   "fieldtype": "Attach",
+   "label": "XML Payload",
+   "read_only": 1
+  },
+  {
+   "fieldname": "xml_hash",
+   "fieldtype": "Data",
+   "label": "XML SHA-256",
+   "read_only": 1
+  },
+  {
+   "fieldname": "receipt",
+   "fieldtype": "Link",
+   "label": "Receipt",
+   "options": "Oman Fawtara Receipt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_timeline",
+   "fieldtype": "Section Break",
+   "label": "Provider (C2) and Authority (C5)"
+  },
+  {
+   "fieldname": "attempt_count",
+   "fieldtype": "Int",
+   "label": "Attempt Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submitted_at",
+   "fieldtype": "Datetime",
+   "label": "Submitted At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_attempt_at",
+   "fieldtype": "Datetime",
+   "label": "Last Attempt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_attempt_at",
+   "fieldtype": "Datetime",
+   "label": "Next Attempt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provider_reference",
+   "fieldtype": "Data",
+   "label": "Provider Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provider_accepted_at",
+   "fieldtype": "Datetime",
+   "label": "Accepted by Provider At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_at",
+   "fieldtype": "Datetime",
+   "label": "Rejected At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ota_reference",
+   "fieldtype": "Data",
+   "label": "OTA Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ota_reported_at",
+   "fieldtype": "Datetime",
+   "label": "Reported to OTA At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ota_acknowledged_at",
+   "fieldtype": "Datetime",
+   "label": "Acknowledged by OTA At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "buyer_delivery_status",
+   "fieldtype": "Data",
+   "label": "Buyer Delivery",
+   "read_only": 1
+  },
+  {
+   "fieldname": "buyer_delivered_at",
+   "fieldtype": "Datetime",
+   "label": "Delivered to Buyer At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_err",
+   "fieldtype": "Section Break",
+   "label": "Errors & Corrections"
+  },
+  {
+   "fieldname": "last_error",
+   "fieldtype": "Small Text",
+   "label": "Error Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "local_validation",
+   "fieldtype": "Code",
+   "label": "Local Validation",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resubmission_reason",
+   "fieldtype": "Small Text",
+   "label": "Resubmission Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supersedes",
+   "fieldtype": "Link",
+   "label": "Supersedes",
+   "options": "Oman Fawtara Submission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "superseded_by",
+   "fieldtype": "Link",
+   "label": "Superseded By",
+   "options": "Oman Fawtara Submission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_payload",
+   "fieldtype": "Section Break",
+   "label": "Canonical Payload",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "canonical_json",
+   "fieldtype": "Code",
+   "label": "Canonical Invoice",
+   "options": "JSON",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman Fawtara Submission",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Fawtara Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Fawtara Operator",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "OFS-.YYYY.-.#######",
+ "in_create": 1,
+ "title_field": "reference_name"
+}

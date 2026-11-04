@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vat_transaction",
+  "transaction_detail",
+  "source_doctype",
+  "source_name",
+  "tax_point_date",
+  "party",
+  "treatment",
+  "vat_code",
+  "box_code",
+  "amount",
+  "is_adjustment"
+ ],
+ "fields": [
+  {
+   "fieldname": "vat_transaction",
+   "fieldtype": "Link",
+   "label": "VAT Transaction",
+   "options": "Oman VAT Transaction",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "transaction_detail",
+   "fieldtype": "Data",
+   "label": "Detail Row"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "label": "Source DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Source",
+   "options": "source_doctype",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tax_point_date",
+   "fieldtype": "Date",
+   "label": "Tax Point"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Data",
+   "label": "Party"
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Link",
+   "label": "Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "vat_code",
+   "fieldtype": "Link",
+   "label": "VAT Code",
+   "options": "Oman VAT Code"
+  },
+  {
+   "fieldname": "box_code",
+   "fieldtype": "Link",
+   "label": "Box",
+   "options": "Oman VAT Return Box",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount (OMR)",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_adjustment",
+   "fieldtype": "Check",
+   "label": "Adjustment"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Return Detail",
+ "owner": "Administrator",
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "permissions": []
+}

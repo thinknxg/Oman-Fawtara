@@ -1,0 +1,21 @@
+{
+ "app": "oman_fawtara",
+ "creation": "2026-11-04 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "receipt-text",
+ "icon_type": "Link",
+ "idx": 50,
+ "label": "Oman Fawtara",
+ "link_to": "Oman Fawtara",
+ "link_type": "Workspace Sidebar",
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Oman Fawtara",
+ "owner": "Administrator",
+ "parent_icon": "",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

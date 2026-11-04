@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "treatment_name",
+  "treatment_name_ar",
+  "nature",
+  "direction",
+  "cb1",
+  "charges_vat",
+  "is_reverse_charge",
+  "is_import",
+  "input_recovery_default",
+  "sb_einv",
+  "tax_category_code",
+  "exemption_reason_code",
+  "cb2",
+  "exemption_reason",
+  "counts_for_fawtara_threshold",
+  "sb_ev",
+  "requires_evidence",
+  "evidence_type",
+  "description",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "treatment_name",
+   "fieldtype": "Data",
+   "label": "Treatment",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "treatment_name_ar",
+   "fieldtype": "Data",
+   "label": "Treatment (Arabic)"
+  },
+  {
+   "fieldname": "nature",
+   "fieldtype": "Select",
+   "label": "Nature",
+   "options": "Standard Rated\nZero Rated\nExempt\nOut of Scope",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Nature is independent of the rate: zero-rated and exempt are never interchangeable."
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Applies To",
+   "options": "Sales\nPurchase\nBoth",
+   "default": "Both",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charges_vat",
+   "fieldtype": "Check",
+   "label": "Supplier Charges VAT on Invoice"
+  },
+  {
+   "fieldname": "is_reverse_charge",
+   "fieldtype": "Check",
+   "label": "Reverse Charge (self-assessed)"
+  },
+  {
+   "fieldname": "is_import",
+   "fieldtype": "Check",
+   "label": "Import"
+  },
+  {
+   "fieldname": "input_recovery_default",
+   "fieldtype": "Select",
+   "label": "Input Recovery Behaviour",
+   "options": "Full\nPartial\nBlocked",
+   "default": "Full"
+  },
+  {
+   "fieldname": "sb_einv",
+   "fieldtype": "Section Break",
+   "label": "E-invoice"
+  },
+  {
+   "fieldname": "tax_category_code",
+   "fieldtype": "Data",
+   "label": "Tax Category Code (UNCL5305)",
+   "default": "S"
+  },
+  {
+   "fieldname": "exemption_reason_code",
+   "fieldtype": "Data",
+   "label": "Exemption Reason Code"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exemption_reason",
+   "fieldtype": "Data",
+   "label": "Exemption Reason Text"
+  },
+  {
+   "fieldname": "counts_for_fawtara_threshold",
+   "fieldtype": "Check",
+   "label": "Counts for Fawtara Threshold"
+  },
+  {
+   "fieldname": "sb_ev",
+   "fieldtype": "Section Break",
+   "label": "Evidence"
+  },
+  {
+   "fieldname": "requires_evidence",
+   "fieldtype": "Check",
+   "label": "Requires Evidence"
+  },
+  {
+   "fieldname": "evidence_type",
+   "fieldtype": "Link",
+   "label": "Evidence Type",
+   "options": "Oman VAT Evidence Type",
+   "depends_on": "requires_evidence"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Treatment",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:treatment_name"
+}

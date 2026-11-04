@@ -1,0 +1,39 @@
+Oman VAT,ضريبة القيمة المضافة - عُمان
+Oman Fawtara,فوترة عُمان
+VAT Registration,التسجيل الضريبي
+VAT Registration Number,رقم التسجيل الضريبي
+Tax Point Date,تاريخ استحقاق الضريبة
+Date of Supply,تاريخ التوريد
+Buyer Type,نوع المشتري
+VAT Treatment,المعاملة الضريبية
+VAT Code,رمز الضريبة
+VAT Rate,نسبة الضريبة
+Taxable Amount,المبلغ الخاضع للضريبة
+Output VAT,ضريبة المخرجات
+Input VAT,ضريبة المدخلات
+Recoverable VAT,الضريبة القابلة للاسترداد
+Non-recoverable VAT,الضريبة غير القابلة للاسترداد
+Reverse Charge,الاحتساب العكسي
+Standard Rated,خاضع للنسبة الأساسية
+Zero Rated,خاضع لنسبة الصفر
+Exempt,معفى
+Out of Scope,خارج النطاق
+Import of Goods,استيراد سلع
+Import of Services,استيراد خدمات
+VAT Return,الإقرار الضريبي
+VAT Period,الفترة الضريبية
+Fawtara Status,حالة الفوترة
+E-invoice UUID,المعرّف الفريد للفاتورة الإلكترونية
+Fawtara Queue,قائمة إرسال الفوترة
+Accepted,مقبولة
+Rejected,مرفوضة
+Retry,إعادة المحاولة
+Reported,تم الإبلاغ
+Acknowledged,تم الإقرار بالاستلام
+Customs Import Declaration,البيان الجمركي للاستيراد
+Bayan Reference,مرجع بيان
+VAT Adjustment Reason,سبب التعديل الضريبي
+Recovery Profile,ملف الاسترداد
+Validation Exceptions,استثناءات التحقق
+Compliance workflow,سير عمل الامتثال
+Quick access,الوصول السريع

@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "vat_registration",
+  "disabled",
+  "sb_out",
+  "output_vat_account",
+  "input_vat_account",
+  "cb1",
+  "rcm_output_vat_account",
+  "rcm_input_vat_account",
+  "sb_imp",
+  "import_vat_account",
+  "import_vat_payable_account",
+  "cb2",
+  "customs_vat_clearing_account",
+  "sb_other",
+  "nonrecoverable_vat_account",
+  "cb3",
+  "vat_adjustment_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vat_registration",
+   "fieldtype": "Link",
+   "label": "VAT Registration",
+   "options": "Oman VAT Registration"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "sb_out",
+   "fieldtype": "Section Break",
+   "label": "Output / Input VAT"
+  },
+  {
+   "fieldname": "output_vat_account",
+   "fieldtype": "Link",
+   "label": "Output VAT Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "input_vat_account",
+   "fieldtype": "Link",
+   "label": "Input VAT Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rcm_output_vat_account",
+   "fieldtype": "Link",
+   "label": "Reverse Charge Output VAT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "rcm_input_vat_account",
+   "fieldtype": "Link",
+   "label": "Reverse Charge Input VAT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sb_imp",
+   "fieldtype": "Section Break",
+   "label": "Imports"
+  },
+  {
+   "fieldname": "import_vat_account",
+   "fieldtype": "Link",
+   "label": "Import VAT (Input) Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "import_vat_payable_account",
+   "fieldtype": "Link",
+   "label": "Postponed Import VAT Payable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customs_vat_clearing_account",
+   "fieldtype": "Link",
+   "label": "Customs VAT Clearing Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sb_other",
+   "fieldtype": "Section Break",
+   "label": "Recovery & Adjustments"
+  },
+  {
+   "fieldname": "nonrecoverable_vat_account",
+   "fieldtype": "Link",
+   "label": "Non-Recoverable VAT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_adjustment_account",
+   "fieldtype": "Link",
+   "label": "VAT Adjustment Account",
+   "options": "Account"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Account Mapping",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "OVAM-.####",
+ "title_field": "company"
+}

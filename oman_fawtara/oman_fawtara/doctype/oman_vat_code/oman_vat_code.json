@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "title",
+  "treatment",
+  "cb1",
+  "direction",
+  "is_default",
+  "is_export",
+  "disabled",
+  "sb_boxes",
+  "output_value_box",
+  "output_vat_box",
+  "output_adjustment_box",
+  "cb_boxes",
+  "input_value_box",
+  "input_vat_box",
+  "fixed_asset_input_vat_box",
+  "input_adjustment_box",
+  "sb_tmpl",
+  "templates",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Link",
+   "label": "Treatment",
+   "options": "Oman VAT Treatment",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Sales\nPurchase\nBoth",
+   "default": "Both"
+  },
+  {
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Default Code for Treatment"
+  },
+  {
+   "fieldname": "is_export",
+   "fieldtype": "Check",
+   "label": "Export / International Supply"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "sb_boxes",
+   "fieldtype": "Section Break",
+   "label": "VAT Return Boxes"
+  },
+  {
+   "fieldname": "output_value_box",
+   "fieldtype": "Link",
+   "label": "Output / Self-assessed Value Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "output_vat_box",
+   "fieldtype": "Link",
+   "label": "Output / Self-assessed VAT Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "output_adjustment_box",
+   "fieldtype": "Link",
+   "label": "Output Adjustment Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "cb_boxes",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "input_value_box",
+   "fieldtype": "Link",
+   "label": "Input Value Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "input_vat_box",
+   "fieldtype": "Link",
+   "label": "Input VAT Box (Recoverable)",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "fixed_asset_input_vat_box",
+   "fieldtype": "Link",
+   "label": "Fixed Asset Input VAT Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "input_adjustment_box",
+   "fieldtype": "Link",
+   "label": "Input Adjustment Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "sb_tmpl",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Item Tax Templates"
+  },
+  {
+   "fieldname": "templates",
+   "fieldtype": "Table",
+   "label": "Item Tax Templates per Company",
+   "options": "Oman VAT Code Template"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Code",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:code",
+ "title_field": "title",
+ "show_title_field_in_link": 1
+}

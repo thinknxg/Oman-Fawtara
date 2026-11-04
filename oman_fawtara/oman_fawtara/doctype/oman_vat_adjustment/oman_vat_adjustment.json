@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "vat_registration",
+  "posting_date",
+  "vat_period",
+  "cb1",
+  "adjustment_type",
+  "direction",
+  "sb_orig",
+  "original_doctype",
+  "original_name",
+  "original_tax_point",
+  "cb2",
+  "original_treatment",
+  "original_period",
+  "treatment",
+  "vat_code",
+  "sb_amt",
+  "taxable_adjustment",
+  "vat_adjustment",
+  "cb3",
+  "reason",
+  "evidence",
+  "sb_post",
+  "post_journal_entry",
+  "contra_account",
+  "journal_entry",
+  "approved_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_registration",
+   "fieldtype": "Link",
+   "label": "VAT Registration",
+   "options": "Oman VAT Registration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date (reporting period)",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "vat_period",
+   "fieldtype": "Link",
+   "label": "VAT Period",
+   "options": "Oman VAT Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adjustment_type",
+   "fieldtype": "Select",
+   "label": "Adjustment Type",
+   "options": "Sales Credit Note\nSales Debit Note\nPurchase Credit Note\nPurchase Debit Note\nBad Debt Relief\nChange in Consideration\nIncorrect VAT Treatment\nPrevious Period Correction\nInput Recovery Change\nManual Statutory Adjustment",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Output\nInput",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_orig",
+   "fieldtype": "Section Break",
+   "label": "Original Transaction"
+  },
+  {
+   "fieldname": "original_doctype",
+   "fieldtype": "Link",
+   "label": "Original DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "original_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Original Document",
+   "options": "original_doctype"
+  },
+  {
+   "fieldname": "original_tax_point",
+   "fieldtype": "Date",
+   "label": "Original Tax Point",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "original_treatment",
+   "fieldtype": "Link",
+   "label": "Original Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "original_period",
+   "fieldtype": "Link",
+   "label": "Original Period",
+   "options": "Oman VAT Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Link",
+   "label": "Corrected Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "vat_code",
+   "fieldtype": "Link",
+   "label": "VAT Code (return boxes)",
+   "options": "Oman VAT Code"
+  },
+  {
+   "fieldname": "sb_amt",
+   "fieldtype": "Section Break",
+   "label": "Amounts (OMR; positive increases the liability/credit)"
+  },
+  {
+   "fieldname": "taxable_adjustment",
+   "fieldtype": "Float",
+   "label": "Taxable Adjustment",
+   "precision": "3"
+  },
+  {
+   "fieldname": "vat_adjustment",
+   "fieldtype": "Float",
+   "label": "VAT Adjustment",
+   "precision": "3",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Link",
+   "label": "Evidence",
+   "options": "Oman VAT Evidence"
+  },
+  {
+   "fieldname": "sb_post",
+   "fieldtype": "Section Break",
+   "label": "Posting"
+  },
+  {
+   "fieldname": "post_journal_entry",
+   "fieldtype": "Check",
+   "label": "Post Journal Entry"
+  },
+  {
+   "fieldname": "contra_account",
+   "fieldtype": "Link",
+   "label": "Contra Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Oman VAT Adjustment",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Adjustment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "OVA-.YYYY.-.#####",
+ "is_submittable": 1
+}

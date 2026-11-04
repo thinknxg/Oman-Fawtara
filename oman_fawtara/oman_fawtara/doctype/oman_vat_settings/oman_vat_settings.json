@@ -1,0 +1,358 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_general",
+  "enabled",
+  "enforcement_mode",
+  "active_ruleset_version",
+  "cb_g1",
+  "vrn_pattern",
+  "currency_precision",
+  "line_tolerance",
+  "allow_future_tax_point",
+  "sb_legal",
+  "legal_review_confirmed",
+  "legal_reviewed_by",
+  "legal_reviewed_on",
+  "cb_legal",
+  "legal_review_notes",
+  "tab_treatments",
+  "default_sales_treatment",
+  "default_purchase_treatment",
+  "import_of_services_treatment",
+  "import_of_goods_treatment",
+  "cb_t1",
+  "auto_detect_reverse_charge",
+  "auto_apply_item_tax_template",
+  "reverse_charge_posting",
+  "tab_recovery",
+  "default_recovery_profile",
+  "default_partial_recovery_profile",
+  "cb_r1",
+  "charge_nonrecoverable_to_item_expense",
+  "exclude_pending_from_return",
+  "tab_return",
+  "credit_note_reporting",
+  "total_vat_due_box",
+  "total_input_vat_box",
+  "net_vat_box",
+  "cb_ret",
+  "return_due_days",
+  "reconciliation_tolerance",
+  "zero_rated_evidence_severity_at_return",
+  "sb_controls",
+  "enforce_segregation_of_duties",
+  "restrict_manual_vat_journals"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_general",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable Oman VAT Engine",
+   "default": "1"
+  },
+  {
+   "fieldname": "enforcement_mode",
+   "fieldtype": "Select",
+   "label": "Enforcement Mode",
+   "options": "Block\nAdvisory",
+   "default": "Block",
+   "description": "Block: validation errors prevent submission. Advisory: errors are recorded and must be cleared before the VAT return is finalized."
+  },
+  {
+   "fieldname": "active_ruleset_version",
+   "fieldtype": "Data",
+   "label": "Active Rule-set Version",
+   "default": "OM-VAT-2026.11-BASELINE"
+  },
+  {
+   "fieldname": "cb_g1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vrn_pattern",
+   "fieldtype": "Data",
+   "label": "VAT Number Pattern (regex)",
+   "default": "^OM\\d{10}$"
+  },
+  {
+   "fieldname": "currency_precision",
+   "fieldtype": "Int",
+   "label": "OMR Precision",
+   "default": "3"
+  },
+  {
+   "fieldname": "line_tolerance",
+   "fieldtype": "Float",
+   "label": "Per-line Tolerance (OMR)",
+   "default": "0.001",
+   "precision": "3"
+  },
+  {
+   "fieldname": "allow_future_tax_point",
+   "fieldtype": "Check",
+   "label": "Allow Future Tax Point"
+  },
+  {
+   "fieldname": "sb_legal",
+   "fieldtype": "Section Break",
+   "label": "Legal Rule-set Review"
+  },
+  {
+   "fieldname": "legal_review_confirmed",
+   "fieldtype": "Check",
+   "label": "Legal Rule-set Reviewed for Production",
+   "description": "Confirm that the rule set reflects Royal Decree 121/2020, the Executive Regulations and all amendments (including Decision 189/2026) as reviewed by an Oman VAT specialist. Production Fawtara providers cannot be enabled until confirmed."
+  },
+  {
+   "fieldname": "legal_reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "legal_reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_legal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "legal_review_notes",
+   "fieldtype": "Small Text",
+   "label": "Review Notes / Specialist Reference"
+  },
+  {
+   "fieldname": "tab_treatments",
+   "fieldtype": "Tab Break",
+   "label": "Treatments"
+  },
+  {
+   "fieldname": "default_sales_treatment",
+   "fieldtype": "Link",
+   "label": "Default Sales Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "default_purchase_treatment",
+   "fieldtype": "Link",
+   "label": "Default Purchase Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "import_of_services_treatment",
+   "fieldtype": "Link",
+   "label": "Import of Services Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "import_of_goods_treatment",
+   "fieldtype": "Link",
+   "label": "Import of Goods Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "cb_t1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_detect_reverse_charge",
+   "fieldtype": "Check",
+   "label": "Auto-detect Reverse Charge / Imports",
+   "default": "1"
+  },
+  {
+   "fieldname": "auto_apply_item_tax_template",
+   "fieldtype": "Check",
+   "label": "Auto-apply Item Tax Template from VAT Code",
+   "default": "1"
+  },
+  {
+   "fieldname": "reverse_charge_posting",
+   "fieldtype": "Select",
+   "label": "Reverse Charge Posting",
+   "options": "Journal Entry\nTax Template",
+   "default": "Journal Entry"
+  },
+  {
+   "fieldname": "tab_recovery",
+   "fieldtype": "Tab Break",
+   "label": "Recovery"
+  },
+  {
+   "fieldname": "default_recovery_profile",
+   "fieldtype": "Link",
+   "label": "Default Recovery Profile",
+   "options": "Oman VAT Recovery Profile"
+  },
+  {
+   "fieldname": "default_partial_recovery_profile",
+   "fieldtype": "Link",
+   "label": "Default Profile for Mixed-use Treatment",
+   "options": "Oman VAT Recovery Profile"
+  },
+  {
+   "fieldname": "cb_r1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charge_nonrecoverable_to_item_expense",
+   "fieldtype": "Check",
+   "label": "Charge Non-recoverable VAT to the Line's Expense Account",
+   "default": "1",
+   "description": "Stock and fixed-asset lines always use the Non-Recoverable VAT Account from the account mapping."
+  },
+  {
+   "fieldname": "exclude_pending_from_return",
+   "fieldtype": "Check",
+   "label": "Exclude Pending-evidence Input VAT from Return",
+   "default": "1"
+  },
+  {
+   "fieldname": "tab_return",
+   "fieldtype": "Tab Break",
+   "label": "Return"
+  },
+  {
+   "fieldname": "credit_note_reporting",
+   "fieldtype": "Select",
+   "label": "Credit/Debit Note Reporting",
+   "options": "Net in Original Box\nAdjustment Box",
+   "default": "Net in Original Box"
+  },
+  {
+   "fieldname": "total_vat_due_box",
+   "fieldtype": "Link",
+   "label": "Total VAT Due Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "total_input_vat_box",
+   "fieldtype": "Link",
+   "label": "Total Input VAT Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "net_vat_box",
+   "fieldtype": "Link",
+   "label": "Net VAT Box",
+   "options": "Oman VAT Return Box"
+  },
+  {
+   "fieldname": "cb_ret",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_due_days",
+   "fieldtype": "Int",
+   "label": "Return Due (days after period end)",
+   "default": "30"
+  },
+  {
+   "fieldname": "reconciliation_tolerance",
+   "fieldtype": "Float",
+   "label": "GL Reconciliation Tolerance (OMR)",
+   "default": "0.010",
+   "precision": "3"
+  },
+  {
+   "fieldname": "zero_rated_evidence_severity_at_return",
+   "fieldtype": "Select",
+   "label": "Missing Zero-rated Evidence at Return",
+   "options": "Error\nWarning",
+   "default": "Error"
+  },
+  {
+   "fieldname": "sb_controls",
+   "fieldtype": "Section Break",
+   "label": "Controls"
+  },
+  {
+   "fieldname": "enforce_segregation_of_duties",
+   "fieldtype": "Check",
+   "label": "Preparer Cannot Finalize Own Return",
+   "default": "1"
+  },
+  {
+   "fieldname": "restrict_manual_vat_journals",
+   "fieldtype": "Check",
+   "label": "Restrict Manual Journals on VAT Accounts",
+   "default": "1"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "issingle": 1
+}

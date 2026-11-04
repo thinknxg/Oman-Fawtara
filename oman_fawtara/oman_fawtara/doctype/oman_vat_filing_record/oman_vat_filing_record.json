@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vat_return",
+  "company",
+  "vat_registration",
+  "vat_period",
+  "net_vat",
+  "cb1",
+  "filing_reference",
+  "filing_date",
+  "filed_by",
+  "acknowledgement_reference",
+  "acknowledgement_file",
+  "sb_pay",
+  "payment_reference",
+  "payment_date",
+  "payment_amount",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "vat_return",
+   "fieldtype": "Link",
+   "label": "VAT Return",
+   "options": "Oman VAT Return",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "fetch_from": "vat_return.company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vat_registration",
+   "fieldtype": "Link",
+   "label": "VAT Registration",
+   "options": "Oman VAT Registration",
+   "fetch_from": "vat_return.vat_registration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vat_period",
+   "fieldtype": "Link",
+   "label": "VAT Period",
+   "options": "Oman VAT Period",
+   "fetch_from": "vat_return.vat_period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_vat",
+   "fieldtype": "Float",
+   "label": "Net VAT (from snapshot)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "filing_reference",
+   "fieldtype": "Data",
+   "label": "OTA Filing Reference",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "filed_by",
+   "fieldtype": "Link",
+   "label": "Filed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "acknowledgement_reference",
+   "fieldtype": "Data",
+   "label": "Acknowledgement Reference"
+  },
+  {
+   "fieldname": "acknowledgement_file",
+   "fieldtype": "Attach",
+   "label": "Acknowledgement"
+  },
+  {
+   "fieldname": "sb_pay",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Float",
+   "label": "Payment Amount",
+   "precision": "3"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Filing Record",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "OVFR-.YYYY.-.####",
+ "track_changes": 1
+}

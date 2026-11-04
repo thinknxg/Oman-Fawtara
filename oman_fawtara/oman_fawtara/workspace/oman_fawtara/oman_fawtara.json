@@ -1,0 +1,709 @@
+{
+ "app": "oman_fawtara",
+ "charts": [],
+ "content": "[{\"id\": \"x44s0o2a0q\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Compliance workflow</b></span>\", \"col\": 12}}, {\"id\": \"poastvjtbo\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"VAT Registrations\", \"col\": 3}}, {\"id\": \"qbjb33sotx\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Current VAT Periods\", \"col\": 3}}, {\"id\": \"q0fw517lsc\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Validation Exceptions\", \"col\": 3}}, {\"id\": \"sfa7xp5jtt\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Recovery Exceptions\", \"col\": 3}}, {\"id\": \"u33ek4a25a\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fawtara Queue\", \"col\": 3}}, {\"id\": \"4h3f5bjozx\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fawtara Rejections\", \"col\": 3}}, {\"id\": \"c8czu46eou\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"VAT Returns\", \"col\": 3}}, {\"id\": \"gf8hpazchd\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Return Reconciliation\", \"col\": 3}}, {\"id\": \"zjqplap7ph\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Period Locks\", \"col\": 3}}, {\"id\": \"gjry0cz333\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fawtara Reconciliation\", \"col\": 3}}, {\"id\": \"qcdbm1q6yg\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"nh0gsh31jz\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick access</b></span>\", \"col\": 12}}, {\"id\": \"piiz16ozlx\", \"type\": \"card\", \"data\": {\"card_name\": \"VAT Configuration\", \"col\": 4}}, {\"id\": \"5l0n1b5tsh\", \"type\": \"card\", \"data\": {\"card_name\": \"VAT Validation\", \"col\": 4}}, {\"id\": \"et5p84n26i\", \"type\": \"card\", \"data\": {\"card_name\": \"VAT Return\", \"col\": 4}}, {\"id\": \"59fgud3f5d\", \"type\": \"card\", \"data\": {\"card_name\": \"VAT Recovery\", \"col\": 4}}, {\"id\": \"6v8kgxzsze\", \"type\": \"card\", \"data\": {\"card_name\": \"Reverse Charge\", \"col\": 4}}, {\"id\": \"om3naaovzn\", \"type\": \"card\", \"data\": {\"card_name\": \"Import Register\", \"col\": 4}}, {\"id\": \"drbydj8on6\", \"type\": \"card\", \"data\": {\"card_name\": \"Adjustments\", \"col\": 4}}, {\"id\": \"8r6b6n44wi\", \"type\": \"card\", \"data\": {\"card_name\": \"Registers\", \"col\": 4}}, {\"id\": \"3lgmbfxsgj\", \"type\": \"card\", \"data\": {\"card_name\": \"Fawtara Queue\", \"col\": 4}}, {\"id\": \"clhown1flf\", \"type\": \"card\", \"data\": {\"card_name\": \"Submission Receipts\", \"col\": 4}}, {\"id\": \"3fcjjkn0cw\", \"type\": \"card\", \"data\": {\"card_name\": \"Fawtara Setup\", \"col\": 4}}, {\"id\": \"hz0qhymw2x\", \"type\": \"card\", \"data\": {\"card_name\": \"Audit Trail\", \"col\": 4}}]",
+ "creation": "2026-11-04 12:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "receipt-text",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Oman Fawtara",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "VAT Configuration",
+   "link_count": 9,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Settings",
+   "link_count": 0,
+   "link_to": "Oman VAT Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Registration",
+   "link_count": 0,
+   "link_to": "Oman VAT Registration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Treatment",
+   "link_count": 0,
+   "link_to": "Oman VAT Treatment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Code",
+   "link_count": 0,
+   "link_to": "Oman VAT Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Rule",
+   "link_count": 0,
+   "link_to": "Oman VAT Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Rate History",
+   "link_count": 0,
+   "link_to": "Oman VAT Rate History",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Account Mapping",
+   "link_count": 0,
+   "link_to": "Oman VAT Account Mapping",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Return Box",
+   "link_count": 0,
+   "link_to": "Oman VAT Return Box",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Evidence Type",
+   "link_count": 0,
+   "link_to": "Oman VAT Evidence Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "VAT Validation",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Validation Log",
+   "link_count": 0,
+   "link_to": "Oman VAT Validation Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Evidence",
+   "link_count": 0,
+   "link_to": "Oman VAT Evidence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Transaction",
+   "link_count": 0,
+   "link_to": "Oman VAT Transaction",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "VAT Return",
+   "link_count": 8,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Return",
+   "link_count": 0,
+   "link_to": "Oman VAT Return",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman VAT Return Working Paper",
+   "link_count": 0,
+   "link_to": "Oman VAT Return Working Paper",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Period",
+   "link_count": 0,
+   "link_to": "Oman VAT Period",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Period Lock",
+   "link_count": 0,
+   "link_to": "Oman VAT Period Lock",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Return Snapshot",
+   "link_count": 0,
+   "link_to": "Oman VAT Return Snapshot",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Filing Record",
+   "link_count": 0,
+   "link_to": "Oman VAT Filing Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Reconciliation",
+   "link_count": 0,
+   "link_to": "Oman VAT Reconciliation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman VAT GL Reconciliation",
+   "link_count": 0,
+   "link_to": "Oman VAT GL Reconciliation",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "VAT Recovery",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Recovery Profile",
+   "link_count": 0,
+   "link_to": "Oman VAT Recovery Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Recovery Rule",
+   "link_count": 0,
+   "link_to": "Oman VAT Recovery Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Recovery Allocation",
+   "link_count": 0,
+   "link_to": "Oman VAT Recovery Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Recovery Adjustment",
+   "link_count": 0,
+   "link_to": "Oman VAT Recovery Adjustment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Input VAT Recovery",
+   "link_count": 0,
+   "link_to": "Oman Input VAT Recovery",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reverse Charge",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Reverse Charge Entry",
+   "link_count": 0,
+   "link_to": "Oman Reverse Charge Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Reverse Charge Register",
+   "link_count": 0,
+   "link_to": "Oman Reverse Charge Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Import Register",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Import Declaration",
+   "link_count": 0,
+   "link_to": "Oman Import Declaration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Import VAT Register",
+   "link_count": 0,
+   "link_to": "Oman Import VAT Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Adjustments",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman VAT Adjustment",
+   "link_count": 0,
+   "link_to": "Oman VAT Adjustment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman VAT Adjustment Register",
+   "link_count": 0,
+   "link_to": "Oman VAT Adjustment Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Registers",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Sales VAT Register",
+   "link_count": 0,
+   "link_to": "Oman Sales VAT Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Purchase VAT Register",
+   "link_count": 0,
+   "link_to": "Oman Purchase VAT Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Zero-Rated Sales",
+   "link_count": 0,
+   "link_to": "Oman Zero-Rated Sales",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Exempt Supplies",
+   "link_count": 0,
+   "link_to": "Oman Exempt Supplies",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fawtara Queue",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Submission",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Submission",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Error Log",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Error Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Submission Log",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Submission Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Oman Fawtara Reconciliation",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Reconciliation",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Submission Receipts",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Receipt",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Receipt",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Document",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Document",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fawtara Setup",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Settings",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Provider",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Provider",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Fawtara Certificate",
+   "link_count": 0,
+   "link_to": "Oman Fawtara Certificate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Trail",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Oman Compliance Audit Log",
+   "link_count": 0,
+   "link_to": "Oman Compliance Audit Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "dependencies": ""
+  }
+ ],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman Fawtara",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 50.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "VAT Registrations",
+   "link_to": "Oman VAT Registration",
+   "type": "DocType",
+   "stats_filter": "{\"status\":\"Active\"}",
+   "format": "{} Active"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Current VAT Periods",
+   "link_to": "Oman VAT Period",
+   "type": "DocType",
+   "stats_filter": "[[\"Oman VAT Period\",\"status\",\"in\",[\"Open\",\"Under Review\"]]]",
+   "format": "{} Open"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Validation Exceptions",
+   "link_to": "Oman VAT Validation Log",
+   "type": "DocType",
+   "stats_filter": "{\"status\":\"Failed\"}",
+   "format": "{} Failed"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Recovery Exceptions",
+   "link_to": "Oman Input VAT Recovery",
+   "type": "Report"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Fawtara Queue",
+   "link_to": "Oman Fawtara Submission",
+   "type": "DocType",
+   "stats_filter": "[[\"Oman Fawtara Submission\",\"status\",\"in\",[\"Pending\",\"Processing\",\"Retry\"]]]",
+   "format": "{} In Progress"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Fawtara Rejections",
+   "link_to": "Oman Fawtara Submission",
+   "type": "DocType",
+   "stats_filter": "{\"status\":\"Rejected\"}",
+   "format": "{} Rejected"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "VAT Returns",
+   "link_to": "Oman VAT Return",
+   "type": "DocType",
+   "stats_filter": "[[\"Oman VAT Return\",\"status\",\"not in\",[\"Filed\",\"Locked\"]]]",
+   "format": "{} In Progress"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Return Reconciliation",
+   "link_to": "Oman VAT Reconciliation",
+   "type": "DocType",
+   "stats_filter": "{\"status\":\"Differences\"}",
+   "format": "{} With Differences"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Period Locks",
+   "link_to": "Oman VAT Period Lock",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "",
+   "label": "Fawtara Reconciliation",
+   "link_to": "Oman Fawtara Reconciliation",
+   "type": "Report"
+  }
+ ],
+ "standard": 1,
+ "title": "Oman Fawtara",
+ "type": "Workspace"
+}

@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "vat_registration",
+  "recovery_profile",
+  "posting_date",
+  "cb1",
+  "period_from",
+  "period_to",
+  "update_profile_provisional",
+  "sb_calc",
+  "taxable_supplies",
+  "exempt_supplies",
+  "actual_ratio",
+  "provisional_ratio",
+  "cb2",
+  "residual_input_vat",
+  "provisionally_recovered",
+  "actually_recoverable",
+  "adjustment_amount",
+  "sb_post",
+  "post_journal_entry",
+  "contra_account",
+  "journal_entry",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_registration",
+   "fieldtype": "Link",
+   "label": "VAT Registration",
+   "options": "Oman VAT Registration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recovery_profile",
+   "fieldtype": "Link",
+   "label": "Apportionment Profile",
+   "options": "Oman VAT Recovery Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_from",
+   "fieldtype": "Date",
+   "label": "Period From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_to",
+   "fieldtype": "Date",
+   "label": "Period To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "update_profile_provisional",
+   "fieldtype": "Check",
+   "label": "Update Profile's Provisional % on Submit",
+   "default": "1"
+  },
+  {
+   "fieldname": "sb_calc",
+   "fieldtype": "Section Break",
+   "label": "Annual Apportionment"
+  },
+  {
+   "fieldname": "taxable_supplies",
+   "fieldtype": "Float",
+   "label": "Taxable Supplies (standard + zero rated)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exempt_supplies",
+   "fieldtype": "Float",
+   "label": "Exempt Supplies",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_ratio",
+   "fieldtype": "Percent",
+   "label": "Actual Recovery Ratio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provisional_ratio",
+   "fieldtype": "Percent",
+   "label": "Provisional Ratio Used",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "residual_input_vat",
+   "fieldtype": "Float",
+   "label": "Residual Input VAT",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provisionally_recovered",
+   "fieldtype": "Float",
+   "label": "Recovered Provisionally",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actually_recoverable",
+   "fieldtype": "Float",
+   "label": "Recoverable at Actual Ratio",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "adjustment_amount",
+   "fieldtype": "Float",
+   "label": "Adjustment (+ further recovery / − repayment)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_post",
+   "fieldtype": "Section Break",
+   "label": "Posting"
+  },
+  {
+   "fieldname": "post_journal_entry",
+   "fieldtype": "Check",
+   "label": "Post Journal Entry",
+   "default": "1"
+  },
+  {
+   "fieldname": "contra_account",
+   "fieldtype": "Link",
+   "label": "Contra Account (default: Non-Recoverable VAT)",
+   "options": "Account"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Oman VAT Recovery Adjustment",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Recovery Adjustment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "ORADJ-.YYYY.-.####",
+ "is_submittable": 1
+}

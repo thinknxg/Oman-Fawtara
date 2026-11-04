@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "source_row",
+  "item_code",
+  "treatment",
+  "vat_code",
+  "rate",
+  "rate_reference",
+  "supply_category",
+  "cb1",
+  "taxable_amount",
+  "output_vat",
+  "input_vat",
+  "recovery_percentage",
+  "recoverable_vat",
+  "nonrecoverable_vat",
+  "rcm_output_vat",
+  "reverse_charge",
+  "is_import",
+  "recovery_status",
+  "recovery_profile",
+  "return_boxes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_row",
+   "fieldtype": "Data",
+   "label": "Source Row"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Link",
+   "label": "Treatment",
+   "options": "Oman VAT Treatment",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vat_code",
+   "fieldtype": "Link",
+   "label": "VAT Code",
+   "options": "Oman VAT Code"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "label": "Rate",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rate_reference",
+   "fieldtype": "Link",
+   "label": "Rate Reference",
+   "options": "Oman VAT Rate History"
+  },
+  {
+   "fieldname": "supply_category",
+   "fieldtype": "Data",
+   "label": "Supply Category"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taxable_amount",
+   "fieldtype": "Float",
+   "label": "Taxable (OMR)",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "output_vat",
+   "fieldtype": "Float",
+   "label": "Output VAT",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "input_vat",
+   "fieldtype": "Float",
+   "label": "Input VAT",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recovery_percentage",
+   "fieldtype": "Percent",
+   "label": "Recovery %"
+  },
+  {
+   "fieldname": "recoverable_vat",
+   "fieldtype": "Float",
+   "label": "Recoverable VAT",
+   "precision": "3"
+  },
+  {
+   "fieldname": "nonrecoverable_vat",
+   "fieldtype": "Float",
+   "label": "Non-recoverable VAT",
+   "precision": "3"
+  },
+  {
+   "fieldname": "rcm_output_vat",
+   "fieldtype": "Float",
+   "label": "RCM Output VAT",
+   "precision": "3"
+  },
+  {
+   "fieldname": "reverse_charge",
+   "fieldtype": "Check",
+   "label": "Reverse Charge"
+  },
+  {
+   "fieldname": "is_import",
+   "fieldtype": "Check",
+   "label": "Import"
+  },
+  {
+   "fieldname": "recovery_status",
+   "fieldtype": "Data",
+   "label": "Recovery Status"
+  },
+  {
+   "fieldname": "recovery_profile",
+   "fieldtype": "Link",
+   "label": "Recovery Profile",
+   "options": "Oman VAT Recovery Profile"
+  },
+  {
+   "fieldname": "return_boxes",
+   "fieldtype": "Small Text",
+   "label": "Return Boxes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Transaction Detail",
+ "owner": "Administrator",
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "permissions": []
+}

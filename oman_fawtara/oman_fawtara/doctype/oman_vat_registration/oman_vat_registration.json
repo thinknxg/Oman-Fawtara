@@ -1,0 +1,336 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "vatin",
+  "legal_name",
+  "trade_name",
+  "cb1",
+  "status",
+  "is_default",
+  "commercial_registration_no",
+  "tax_card_number",
+  "sb_dates",
+  "registration_date",
+  "effective_from",
+  "effective_to",
+  "cb2",
+  "return_frequency",
+  "first_period_start",
+  "is_tax_group",
+  "group_members",
+  "sb_contact",
+  "address",
+  "cb3",
+  "contact_email",
+  "contact_phone",
+  "tab_fawtara",
+  "fawtara_enabled",
+  "fawtara_provider",
+  "peppol_participant_id",
+  "cb_f",
+  "fawtara_mandate_date",
+  "fawtara_mandate_date_override",
+  "fawtara_voluntary_start_date",
+  "sb_threshold",
+  "annual_supplies_reference",
+  "annual_supplies_expected",
+  "cb_th",
+  "annual_supplies_computed"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "vatin",
+   "fieldtype": "Data",
+   "label": "VAT Registration Number",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "legal_name",
+   "fieldtype": "Data",
+   "label": "Legal Name (as registered)"
+  },
+  {
+   "fieldname": "trade_name",
+   "fieldtype": "Data",
+   "label": "Trade Name"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nSuspended\nDeregistered",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Default for Company",
+   "default": "1"
+  },
+  {
+   "fieldname": "commercial_registration_no",
+   "fieldtype": "Data",
+   "label": "Commercial Registration (CR) No."
+  },
+  {
+   "fieldname": "tax_card_number",
+   "fieldtype": "Data",
+   "label": "Tax Card / TIN"
+  },
+  {
+   "fieldname": "sb_dates",
+   "fieldtype": "Section Break",
+   "label": "Validity"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_frequency",
+   "fieldtype": "Select",
+   "label": "Return Frequency",
+   "options": "Quarterly\nMonthly",
+   "default": "Quarterly"
+  },
+  {
+   "fieldname": "first_period_start",
+   "fieldtype": "Date",
+   "label": "First Return Period Start"
+  },
+  {
+   "fieldname": "is_tax_group",
+   "fieldtype": "Check",
+   "label": "VAT Group Registration"
+  },
+  {
+   "fieldname": "group_members",
+   "fieldtype": "Small Text",
+   "label": "Group Member Companies",
+   "depends_on": "is_tax_group"
+  },
+  {
+   "fieldname": "sb_contact",
+   "fieldtype": "Section Break",
+   "label": "Address & Contact"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Registered Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "tab_fawtara",
+   "fieldtype": "Tab Break",
+   "label": "Fawtara"
+  },
+  {
+   "fieldname": "fawtara_enabled",
+   "fieldtype": "Check",
+   "label": "Fawtara E-invoicing Enabled"
+  },
+  {
+   "fieldname": "fawtara_provider",
+   "fieldtype": "Link",
+   "label": "Accredited Service Provider",
+   "options": "Oman Fawtara Provider"
+  },
+  {
+   "fieldname": "peppol_participant_id",
+   "fieldtype": "Data",
+   "label": "Electronic Address / Participant ID"
+  },
+  {
+   "fieldname": "cb_f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fawtara_mandate_date",
+   "fieldtype": "Date",
+   "label": "Mandatory From (computed)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fawtara_mandate_date_override",
+   "fieldtype": "Date",
+   "label": "Mandate Date Override"
+  },
+  {
+   "fieldname": "fawtara_voluntary_start_date",
+   "fieldtype": "Date",
+   "label": "Voluntary / Pilot Start Date"
+  },
+  {
+   "fieldname": "sb_threshold",
+   "fieldtype": "Section Break",
+   "label": "OMR 5 million Threshold Assessment",
+   "description": "Supplies counted per Oman Fawtara Settings (reference periods) and the treatments flagged 'Counts for Fawtara Threshold'. Verify the assessment independently."
+  },
+  {
+   "fieldname": "annual_supplies_reference",
+   "fieldtype": "Float",
+   "label": "Supplies in Reference Period (OMR)",
+   "precision": "3"
+  },
+  {
+   "fieldname": "annual_supplies_expected",
+   "fieldtype": "Float",
+   "label": "Expected Supplies, Next 12 Months (OMR)",
+   "precision": "3"
+  },
+  {
+   "fieldname": "cb_th",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "annual_supplies_computed",
+   "fieldtype": "Float",
+   "label": "Computed from VAT Ledger (OMR)",
+   "precision": "3",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman VAT Registration",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Approver",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Oman VAT User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "OVREG-.#####",
+ "title_field": "vatin",
+ "search_fields": "company,vatin",
+ "show_title_field_in_link": 1
+}

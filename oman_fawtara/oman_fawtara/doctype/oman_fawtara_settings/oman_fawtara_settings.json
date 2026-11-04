@@ -1,0 +1,350 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_general",
+  "enabled",
+  "default_provider",
+  "submit_immediately",
+  "block_on_local_validation_error",
+  "cb_g",
+  "include_b2c",
+  "include_b2g",
+  "skip_out_of_scope_only",
+  "sb_mandate",
+  "phase_1_date",
+  "phase_2_date",
+  "mandate_threshold_omr",
+  "cb_m",
+  "threshold_period_start",
+  "threshold_period_end",
+  "legal_source_notes",
+  "tab_format",
+  "customization_id",
+  "profile_id",
+  "profile_execution_id",
+  "endpoint_scheme",
+  "cr_scheme_id",
+  "cb_x",
+  "require_endpoint",
+  "include_line_tax_amount",
+  "include_line_description",
+  "include_ubl_version",
+  "use_credit_note_root",
+  "use_transaction_flags",
+  "transaction_flag_order",
+  "default_payment_means_code",
+  "default_adjustment_reason_code",
+  "local_tolerance",
+  "xsd_file",
+  "tab_queue",
+  "max_attempts",
+  "retry_base_seconds",
+  "batch_size",
+  "cb_q",
+  "new_uuid_on_resubmit",
+  "retention_years"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_general",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable Fawtara Integration"
+  },
+  {
+   "fieldname": "default_provider",
+   "fieldtype": "Link",
+   "label": "Default Service Provider",
+   "options": "Oman Fawtara Provider"
+  },
+  {
+   "fieldname": "submit_immediately",
+   "fieldtype": "Check",
+   "label": "Queue Submission Immediately on Invoice Submit",
+   "default": "1"
+  },
+  {
+   "fieldname": "block_on_local_validation_error",
+   "fieldtype": "Check",
+   "label": "Block Invoice Submit on Local E-invoice Errors",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "include_b2c",
+   "fieldtype": "Check",
+   "label": "E-invoice B2C",
+   "default": "1"
+  },
+  {
+   "fieldname": "include_b2g",
+   "fieldtype": "Check",
+   "label": "E-invoice B2G",
+   "default": "1"
+  },
+  {
+   "fieldname": "skip_out_of_scope_only",
+   "fieldtype": "Check",
+   "label": "Skip Documents with only Out-of-scope Lines",
+   "default": "1"
+  },
+  {
+   "fieldname": "sb_mandate",
+   "fieldtype": "Section Break",
+   "label": "Mandate (Decision No. 189/2026)",
+   "description": "Verified baseline: 1 April 2027 where annual supplies exceed OMR 5 million; 1 October 2027 otherwise. Confirm the threshold reference periods against the OTA FAQ in force."
+  },
+  {
+   "fieldname": "phase_1_date",
+   "fieldtype": "Date",
+   "label": "Phase 1 Date (above threshold)",
+   "default": "2027-04-01"
+  },
+  {
+   "fieldname": "phase_2_date",
+   "fieldtype": "Date",
+   "label": "Phase 2 Date (at/below threshold)",
+   "default": "2027-10-01"
+  },
+  {
+   "fieldname": "mandate_threshold_omr",
+   "fieldtype": "Float",
+   "label": "Threshold (OMR)",
+   "default": "5000000",
+   "precision": "3"
+  },
+  {
+   "fieldname": "cb_m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "threshold_period_start",
+   "fieldtype": "Date",
+   "label": "Threshold Reference Period Start",
+   "default": "2026-04-01"
+  },
+  {
+   "fieldname": "threshold_period_end",
+   "fieldtype": "Date",
+   "label": "Threshold Reference Period End",
+   "default": "2027-03-31"
+  },
+  {
+   "fieldname": "legal_source_notes",
+   "fieldtype": "Small Text",
+   "label": "Legal Source Notes"
+  },
+  {
+   "fieldname": "tab_format",
+   "fieldtype": "Tab Break",
+   "label": "XML Format"
+  },
+  {
+   "fieldname": "customization_id",
+   "fieldtype": "Data",
+   "label": "CustomizationID",
+   "default": "urn:peppol:pint:billing-1@om-1",
+   "description": "Confirm against the published PINT-OM specification before go-live."
+  },
+  {
+   "fieldname": "profile_id",
+   "fieldtype": "Data",
+   "label": "ProfileID",
+   "default": "urn:peppol:bis:billing"
+  },
+  {
+   "fieldname": "profile_execution_id",
+   "fieldtype": "Data",
+   "label": "ProfileExecutionID"
+  },
+  {
+   "fieldname": "endpoint_scheme",
+   "fieldtype": "Data",
+   "label": "Endpoint (EAS) Scheme ID",
+   "description": "Electronic address scheme assigned for Oman participants."
+  },
+  {
+   "fieldname": "cr_scheme_id",
+   "fieldtype": "Data",
+   "label": "Commercial Registration Scheme ID"
+  },
+  {
+   "fieldname": "cb_x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "require_endpoint",
+   "fieldtype": "Check",
+   "label": "Require Electronic Addresses",
+   "default": "1"
+  },
+  {
+   "fieldname": "include_line_tax_amount",
+   "fieldtype": "Check",
+   "label": "Include Line VAT Amount"
+  },
+  {
+   "fieldname": "include_line_description",
+   "fieldtype": "Check",
+   "label": "Include Line Description"
+  },
+  {
+   "fieldname": "include_ubl_version",
+   "fieldtype": "Check",
+   "label": "Include UBLVersionID"
+  },
+  {
+   "fieldname": "use_credit_note_root",
+   "fieldtype": "Check",
+   "label": "Use UBL CreditNote Root for Credit Notes",
+   "default": "1"
+  },
+  {
+   "fieldname": "use_transaction_flags",
+   "fieldtype": "Check",
+   "label": "Encode Transaction Flags in Type Code 'name'"
+  },
+  {
+   "fieldname": "transaction_flag_order",
+   "fieldtype": "Data",
+   "label": "Transaction Flag Order",
+   "default": "b2b,b2c,b2g,self_billing,reverse_charge,export,import",
+   "depends_on": "use_transaction_flags"
+  },
+  {
+   "fieldname": "default_payment_means_code",
+   "fieldtype": "Data",
+   "label": "Default Payment Means Code (UNCL4461)",
+   "default": "30"
+  },
+  {
+   "fieldname": "default_adjustment_reason_code",
+   "fieldtype": "Data",
+   "label": "Default Credit Note Reason Code"
+  },
+  {
+   "fieldname": "local_tolerance",
+   "fieldtype": "Float",
+   "label": "Local Arithmetic Tolerance",
+   "default": "0.01",
+   "precision": "3"
+  },
+  {
+   "fieldname": "xsd_file",
+   "fieldtype": "Attach",
+   "label": "XSD Schema (optional, for local validation)"
+  },
+  {
+   "fieldname": "tab_queue",
+   "fieldtype": "Tab Break",
+   "label": "Queue"
+  },
+  {
+   "fieldname": "max_attempts",
+   "fieldtype": "Int",
+   "label": "Max Transient Retries",
+   "default": "8"
+  },
+  {
+   "fieldname": "retry_base_seconds",
+   "fieldtype": "Int",
+   "label": "Retry Base Delay (seconds)",
+   "default": "60"
+  },
+  {
+   "fieldname": "batch_size",
+   "fieldtype": "Int",
+   "label": "Scheduler Batch Size",
+   "default": "200"
+  },
+  {
+   "fieldname": "cb_q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_uuid_on_resubmit",
+   "fieldtype": "Check",
+   "label": "New UUID on Authorised Resubmission",
+   "default": "1"
+  },
+  {
+   "fieldname": "retention_years",
+   "fieldtype": "Int",
+   "label": "Archive Retention (years)",
+   "default": "10"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman Fawtara Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Fawtara Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Fawtara Operator",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  },
+  {
+   "role": "Oman VAT Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "issingle": 1
+}

@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_item",
+  "item_code",
+  "treatment",
+  "taxable_amount",
+  "vat_rate",
+  "output_vat",
+  "recovery_percentage",
+  "recoverable_vat",
+  "nonrecoverable_vat",
+  "nonrecoverable_account",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_item",
+   "fieldtype": "Data",
+   "label": "Invoice Row"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Link",
+   "label": "Treatment",
+   "options": "Oman VAT Treatment"
+  },
+  {
+   "fieldname": "taxable_amount",
+   "fieldtype": "Float",
+   "label": "Taxable (OMR)",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "output_vat",
+   "fieldtype": "Float",
+   "label": "Self-assessed Output VAT",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recovery_percentage",
+   "fieldtype": "Percent",
+   "label": "Recovery %"
+  },
+  {
+   "fieldname": "recoverable_vat",
+   "fieldtype": "Float",
+   "label": "Recoverable Input VAT",
+   "precision": "3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "nonrecoverable_vat",
+   "fieldtype": "Float",
+   "label": "Non-recoverable",
+   "precision": "3"
+  },
+  {
+   "fieldname": "nonrecoverable_account",
+   "fieldtype": "Link",
+   "label": "Non-recoverable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Oman Fawtara",
+ "name": "Oman Reverse Charge Entry Item",
+ "owner": "Administrator",
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "permissions": []
+}
